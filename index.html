@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prijava in Registracija - Nike</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="imask.js"></script>
+</head>
+<body>
+    <div class="content-wrapper">
+        <div class="background">
+            <div class="logo-container">
+                <p class="slogan">Ustvarjamo lepši svet za vas, Nike.</p>
+            </div>
+        </div>
+
+        <div class="form-wrapper">
+            <div class="container" id="loginContainer">
+                <img src="Slike/logo.png" class="logo">
+                <h1>Prijava</h1>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="email">E-pošta:</label>
+                        <input type="email" id="email">
+                        <div id="prijava" class="prijava"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Geslo:</label>
+                        <input type="password" id="password">
+                        <div id="gesloError" class="prijava"></div>
+                    </div>
+                    <button type="submit">Prijavi se</button>
+                </form>
+                <p class="register-text">Nimate računa? <a href="#" id="openRegister">Registrirajte se tukaj</a></p>
+            </div>
+
+            <div class="container" id="registrationContainer" style="display: none;">
+                <img src="Slike/logo.png" class="logo">
+                <h1>Registracija</h1>
+                <form id="registrationForm">
+                    <div class="form-group">
+                        <label for="first-name">Ime:</label>
+                        <input type="text" id="first-name">
+                        <div id="firstNameError" class="error-message" style="color:red"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Priimek:</label>
+                        <input type="text" id="last-name">
+                        <div id="lastNameError" class="error-message" style="color:red"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Datum rojstva:</label>
+                        <input type="date" id="dob">
+                        <div id="dobErrorMessage" class="error-message"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefonska številka:</label>
+                        <input type="tel" id="phone" placeholder="012-345-678">
+                        <div id="phoneErrorMessage" class="error-message"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-email">E-pošta:</label>
+                        <input type="email" id="reg-email">
+                        <div id="regErrorMessage" class="error-message" style="color:red"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-password">Geslo:</label>
+                        <input type="password" id="reg-password">
+                        <div id="regPasswordMsg" class="error-message" style="color:red"></div>
+                        <div id="password-checklist">
+                            <div id="lengthCheck" class="check-item">? Vsaj 8 znakov</div>
+                            <div id="uppercaseCheck" class="check-item">? Vsaj ena velika črka</div>
+                            <div id="numberCheck" class="check-item">? Vsaj ena številka</div>
+                            <div id="specialCharCheck" class="check-item">? Vsaj en poseben znak</div>
+                        </div>
+                    </div>
+                    <button type="submit">Registriraj se</button>
+                    <p class="register-text"><a href="#" id="backToLogin">Nazaj na prijavo</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

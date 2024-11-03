@@ -1,0 +1,231 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.background {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-image: url("Slike/nike-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+}
+
+.logo-container {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.logo {
+    max-width: 120px;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.slogan {
+    font-size: 60px;
+    color: white;
+    margin-top: 10px;
+}
+
+.form-wrapper {
+    width: 50%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: white;
+    overflow-y: auto;
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+}
+
+h1 {
+    text-align: left;
+    color: #333;
+    font-size: 35px;
+    margin: 10px 0 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+label {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 85%;
+    padding: 12px;
+    font-size: 0.95em;
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+}
+
+input:focus {
+    outline: none;
+    border-color: blue;
+    box-shadow: 0 0 5px darkblue;
+}
+
+button {
+    width: 85%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+}
+
+.prijava {
+    color: red;
+    text-align: left;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.register-text {
+    text-align: left;
+    font-size: 16px;
+    color: #333;
+    margin-top: 5px;
+}
+
+.register-text a {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+#password-checklist {
+    font-size: 15px;
+    color: #555;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.check-item {
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+}
+
+.check-item::before {
+    content: "•";
+    margin-right: 8px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.valid {
+    color: green;
+}
+
+.invalid {
+    color: red;
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    .background {
+        display: none;
+    }
+
+    .form-wrapper {
+        width: 100%;
+        padding: 20px;
+        overflow-y: auto;
+        align-items: left;
+        justify-content: flex-start;
+    }
+
+    .container {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: flex-start;
+    }
+
+    input {
+        margin-left: 10px;
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    button {
+        margin-left: 10px;
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .slogan {
+        font-size: 40px;
+    }
+
+    label{
+        margin-left: 10px;
+    }
+
+    p{
+        margin-left: 10px;
+    }
+
+    .check-item{
+        margin-left: 10px;
+    }
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
+}
