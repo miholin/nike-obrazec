@@ -41,7 +41,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     
         if (!hasError) {
-            alert('Prijava uspešna!');
+            Swal.fire({
+                title: 'Uspešna prijava!',
+                text: 'Dobrodošli nazaj!',
+                icon: 'success',
+                confirmButtonText: 'OK',
+                didOpen: () => {
+                    document.body.classList.remove('swal2-height-auto');
+                }
+            });
             document.getElementById('loginForm').reset();
         }
     });
@@ -139,7 +147,15 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
         document.getElementById('registrationForm').reset();
-        alert('Registracija uspešna!');
+        Swal.fire({
+            title: 'Uspešna registracija!',
+            text: 'Dobrodošli!',
+            icon: 'success',
+            confirmButtonText: 'OK',
+            didOpen: () => {
+                document.body.classList.remove('swal2-height-auto');
+            }
+        });
         resetPasswordChecklist();
     
         document.getElementById('registrationContainer').style.display = 'none';
